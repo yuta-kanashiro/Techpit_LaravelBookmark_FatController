@@ -126,11 +126,7 @@ class BookmarkController extends Controller
      */
     public function create(CreateBookmarkRequest $request)
     {
-        if (Auth::guest()) {
-            // @note ここの処理はユーザープロフィールでも使われている
-            return redirect('/login');
-        }
-
+        // ログイン確認処理移動（web.php）
         // バリデーション移動（FormRequest）
 
         // 下記のサービスでも同様のことが実現できる
